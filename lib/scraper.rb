@@ -34,6 +34,7 @@ class Scraper
       else
         blog = social.attribute("href").value
       end
+    end
     # #twitter = doc.css(".social-icon-container a")[0].attribute("href").value
     # linkedin = doc.css(".social-icon-container a")[1].attribute("href").value
     # github = doc.css(".social-icon-container a")[2].attribute("href").value
