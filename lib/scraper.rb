@@ -20,6 +20,7 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
+    binding.pry
     profile_quote = doc.css(".profile-quote").text
 
     profile_hash = {:profile_quote=>profile_quote}
@@ -27,4 +28,5 @@ class Scraper
 
 end
 
-Scraper.scrape_index_page("https://learn-co-curriculum.github.io/student-scraper-test-page/index.html")
+#Scraper.scrape_index_page("https://learn-co-curriculum.github.io/student-scraper-test-page/index.html")
+Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html")
