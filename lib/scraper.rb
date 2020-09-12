@@ -20,7 +20,7 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
-
+    binding.pry
     profile_quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
     twitter = doc.css(".social-icon-container a")[0].attribute("href").value
