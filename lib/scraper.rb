@@ -33,14 +33,11 @@ class Scraper
         github = social.attribute("href").value
       else
         blog = social.attribute("href").value
-
-
-      binding.pry
-
-    #twitter = doc.css(".social-icon-container a")[0].attribute("href").value
-    linkedin = doc.css(".social-icon-container a")[1].attribute("href").value
-    github = doc.css(".social-icon-container a")[2].attribute("href").value
-    blog = doc.css(".social-icon-container a")[3].attribute("href").value
+      end
+    # #twitter = doc.css(".social-icon-container a")[0].attribute("href").value
+    # linkedin = doc.css(".social-icon-container a")[1].attribute("href").value
+    # github = doc.css(".social-icon-container a")[2].attribute("href").value
+    # blog = doc.css(".social-icon-container a")[3].attribute("href").value
 
     profile_hash = {:twitter=>twitter, :linkedin=>linkedin, :github=>github, :blog=>blog, :profile_quote=>profile_quote, :bio=>bio}
 
