@@ -25,8 +25,16 @@ class Scraper
     bio = doc.css(".description-holder p").text
 
     doc.css(".social-icon-container a").each do |social|
-      if social.attribute("href").value.match(/\w+twitter\w+/)
+      if social.attribute("href").value.match(/twitter/)
         twitter = social.attribute("href").value
+      elsif social.attribute("href").value.match(/linkedin/)
+        linkedin = social.attribute("href").value
+      elsif social.attribute("href").value.match(/github/)
+        github = social.attribute("href").value
+      else
+        blog = social.attribute("href").value
+
+
       binding.pry
 
     #twitter = doc.css(".social-icon-container a")[0].attribute("href").value
