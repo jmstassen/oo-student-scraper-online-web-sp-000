@@ -44,7 +44,7 @@ class Scraper
     # github = doc.css(".social-icon-container a")[2].attribute("href").value
     # blog = doc.css(".social-icon-container a")[3].attribute("href").value
 
-    profile_hash = {:twitter=>twitter, :linkedin=>linkedin, :github=>github, :blog=>blog, :profile_quote=>profile_quote, :bio=>bio}
+    #profile_hash = {:twitter=>twitter, :linkedin=>linkedin, :github=>github, :blog=>blog, :profile_quote=>profile_quote, :bio=>bio}
 
   end
 
